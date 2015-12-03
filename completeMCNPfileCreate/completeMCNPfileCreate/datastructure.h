@@ -45,7 +45,8 @@ void storeDensityAndMaterial(float *ORGANSDESTINY, int *ORGANMATERIAL, char* inp
 int convertXYZToSequence(int x, int y, int z, McnpFillStruct mcnpgeo999);
 void correctPosition(McnpFillStruct& mcnpgeo999);
 int outputGeo(McnpFillStruct mcnpgeo999);
-int dataOutput(McnpFillStruct mcnpgeo999, FILE* &editfile);  // material tally and ...
+int dataOutput(McnpFillStruct mcnpgeo999, FILE* &editfile, char* filepath);  // material tally and ...
+int finddirpath(char *filepath); // 查找filepath所在的目录，返回最后一个'/'或'\'的索引
 
 int compareGeo(McnpFillStruct mcnpgeoA, McnpFillStruct mcnpgeoB);
 int replacEyeLence(McnpFillStruct mcnpgeoA, McnpFillStruct mcnpgeoB, unsigned int idnum);
@@ -71,4 +72,7 @@ int geoZoom(McnpFillStruct& mcnpgeo999, int Xnegative, int Xpositive, int Ynegat
 // dir方向增加negatiove(靠近dir负方向一侧)和positive(靠近dir正方向一侧),dir可以取'X','Y','Z'
 int geoZoomSingledir(McnpFillStruct& mcnpgeo999, int negatiove, int positive, char dir);
 
-
+int   datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
+int   datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
+int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
+int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
