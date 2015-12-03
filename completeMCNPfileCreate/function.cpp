@@ -40,8 +40,8 @@ int readMCNPFile(char*& inputpath, FILE** mcnpFile)
 void storeDensityAndMaterial(float *ORGANSDESTINY, int *ORGANMATERIAL, char* inputpath)
 {
     // density.txt located in the same dir with inputpath
-    // get the dir path
-	char* dirpath = new char[500];
+    // gei the dir path
+    char* dirpath = new char[500];
     strcpy(dirpath, inputpath);
 
     for (int i = 0; i < strlen(dirpath); i++)
@@ -172,29 +172,6 @@ int storeGeo(FILE* mcnpfile, McnpFillStruct& mcnpgeo999)
 			break;
 	}
 
-	// for store material index and density value
-	// 仅在材料信息填写完整后才能正常使用
-	mcnpgeo999.materialindex = new int[200];
-	for (int i = 0; i < 200; i++) *(mcnpgeo999.materialindex + i) = 0;
-	mcnpgeo999.densityvalue = new float[200];
-	for (int i = 0; i < 200; i++) *(mcnpgeo999.densityvalue + i) = 0;
-	fgets(linetmp, 190, mcnpfile); // 跳过空格
-	while (0 != fgets(linetmp, 190, mcnpfile))
-	{
-		if (0 == strlen(linetmp) || '\n' == *(linetmp))
-			break;
-		int organindex = 0;
-		if ('c' != *linetmp && 'C' != *linetmp)
-		{
-			sscanf(linetmp, "%d", &organindex);
-			sscanf((linetmp + 3), "%d", (mcnpgeo999.materialindex + organindex));
-			if (0 != *(mcnpgeo999.materialindex + organindex))
-			{
-				sscanf((linetmp + 3), "%*s %f", (mcnpgeo999.densityvalue + organindex));
-			}
-		}
-	}
-
 	//voxelfillidtmp
 	fseek(mcnpfile, 0, SEEK_SET);
 	while (0 != fgets(linetmp, 190, mcnpfile))
@@ -315,11 +292,6 @@ int outputGeo(McnpFillStruct mcnpgeo999)
 		{
 			sscanf(linetmp, "%d", &organname);
 			sscanf(linetmp, "%*s%[^\n]", namelist + 80 * organname);
-			for (int i = 0; i < 80; i++)
-			{
-				if ('	' == *(namelist + 80 * organname + i)) // tab可能造成MCNP的输入文件不能运行
-					*(namelist + 80 * organname + i) = ' ';
-			}
 		}
 	}
 
@@ -333,9 +305,8 @@ int outputGeo(McnpFillStruct mcnpgeo999)
 	fprintf(outputfile, "%s", "C ******************************************************************************\n");
 	fprintf(outputfile, "%s", "C                               Cells cards\n");
 	fprintf(outputfile, "%s", "C ******************************************************************************\n");
-	//fprintf(outputfile, "%s", "888   0  2                          $ exterior - zero importance\n");
-	fprintf(outputfile, "%s", "777   0  4                          $ exterior - zero importance\n");
-    fprintf(outputfile, "%s", "888   21   -0.001293   2   -4       $ bigger box   \n");
+	fprintf(outputfile, "%s", "888   0  2                          $ exterior - zero importance\n");
+    //fprintf(outputfile, "%s", "777   21   -0.001293   2   -4       $ bigger box   \n");
 	fprintf(outputfile, "%s", "555   0  -2     fill=666            $ Others phantom box \n");
 
 	fprintf(outputfile, "%s", "C ****************  Image data start from here *******************************\n");
@@ -448,19 +419,11 @@ int outputGeo(McnpFillStruct mcnpgeo999)
 		// }
 		if ('\0' != *(namelist + i * 80))
 		{
-			if (0 == *(mcnpgeo999.materialindex + i))
-			{
-			    fprintf(outputfile, "%-5d %-5d %s %-5d %s %-4d %s %-12.4f %s %-10d", \
-			    	i, *(mcnpgeo999.materialindex + i), "         " , 3, " u=", i, " vol=", *(organscount + i)*mcnpgeo999.voxelsizex*mcnpgeo999.voxelsizey*mcnpgeo999.voxelsizez, " $ n= ", *(organscount + i));
-			}
-			else
-			{
-				fprintf(outputfile, "%-5d %-5d %-9.6f %-5d %s %-4d %s %-12.4f %s %-10d", \
-					i, *(mcnpgeo999.materialindex + i), *(mcnpgeo999.densityvalue + i), 3, " u=", i, " vol=", *(organscount + i)*mcnpgeo999.voxelsizex*mcnpgeo999.voxelsizey*mcnpgeo999.voxelsizez, " $ n= ", *(organscount + i));
-			}
-			
-			fprintf(outputfile, "%s\n", (namelist + i * 80));
-			// fputc('\n', outputfile);
+			fprintf(outputfile, "%-5d %-5d %-5d %s %-4d %s %-12.4f %s %-10d", \
+				i, i, 3, " u=", i, " vol=", *(organscount + i)*mcnpgeo999.voxelsizex*mcnpgeo999.voxelsizey*mcnpgeo999.voxelsizez, "   $n=", *(organscount + i));
+
+			fprintf(outputfile, "  %s", (namelist + i * 80));
+			fputc('\n', outputfile);
 			outnumcount++;
 		}
 	}
@@ -474,90 +437,11 @@ int outputGeo(McnpFillStruct mcnpgeo999)
 	fprintf(outputfile, "1     %s %-4.2f %-4.2f %-4.2f %-4.2f %-4.2f %-4.2f $Voxel size\n", "rpp", 0.0, mcnpgeo999.voxelsizex, 0.0, mcnpgeo999.voxelsizey, 0.0, mcnpgeo999.voxelsizez);
 	fprintf(outputfile, "2     rpp 0.0 %.4f 0.0 %.4f 0.0 %.4f $ Box\n", mcnpgeo999.voxelsizex*(mcnpgeo999.dimxsup - mcnpgeo999.dimxinf + 1), mcnpgeo999.voxelsizey*(mcnpgeo999.dimysup - mcnpgeo999.dimyinf + 1), mcnpgeo999.voxelsizez*(mcnpgeo999.dimzsup - mcnpgeo999.dimzinf + 1));
 	fprintf(outputfile, "3     pz  -1e2  $ XY plane used in universe definition\n");
-    fprintf(outputfile, "4     rpp -20 80 -20 60 -20 200 $ Box\n\n");
+    //fprintf(outputfile, "4     rpp -20 80 -20 60 -20 200 $ Box");
 	delete[]linetmp;
 	delete[]organlistpath;
 
-	dataOutput(mcnpgeo999, outputfile);
-
 	fclose(outputfile);
-	return 0;
-}
-
-int dataOutput(McnpFillStruct mcnpgeo999, FILE* &editfile)
-{
-	int ageindex = 1;
-	std::cout << "*****************************************\nPlease input age index:" << std::endl;
-	std::cout << "(1 AM, 2 AF, 3 15M, 4 15F, 5 10M, 6 10F, 7 5M, 8 5F, 9 1M, 10 1F)" << std::endl;
-	do 
-	{
-		std::cin >> ageindex;
-		if (ageindex > 10 || ageindex < 0)
-		{
-			std::cout << "Wrong input, continue(y or no) ?" << std::endl;
-			char yorn;
-			std::cin >> yorn;
-			if ('y' == yorn)
-				continue;
-			else
-			{
-				std::cout << "Do nothing" << std::endl;
-				return 1;
-			}
-		}
-		else
-			break;
-	} while (1);
-	
-	char *agename = new char[100];
-	switch (ageindex)
-	{
-	case 1:
-		strcpy(agename, "am");
-		break;
-	case 2:
-		strcpy(agename, "af");
-		break;
-	case 3:
-		strcpy(agename, "15m");
-		break;
-	case 4:
-		strcpy(agename, "15f");
-		break;
-	case 5:
-		strcpy(agename, "10m");
-		break;
-	case 6:
-		strcpy(agename, "10f");
-		break;
-	case 7:
-		strcpy(agename, "5m");
-		break;
-	case 8:
-		strcpy(agename, "5f");
-		break;
-	case 9:
-		strcpy(agename, "1m");
-		break;
-	case 10:
-		strcpy(agename, "1f");
-		break;
-	default:
-		break;
-	}
-
-	fprintf(editfile, "C ******************************************************************************\n"); 
-	fprintf(editfile, "C                               data cards\n"); 
-	fprintf(editfile, "C ******************************************************************************\n");
-
-	fprintf(editfile, "C ------------------------elemental composition------------------------\n");
-	fprintf(editfile, "read file=elecommon.txt noecho \n");
-	fprintf(editfile, "read file=");
-	fprintf(editfile, agename);
-	fprintf(editfile, "ele.txt noecho \n");
-	fprintf(editfile, "C ------------------------source tally .... ------------------------\n");
-
-	free(agename);
 	return 0;
 }
 
