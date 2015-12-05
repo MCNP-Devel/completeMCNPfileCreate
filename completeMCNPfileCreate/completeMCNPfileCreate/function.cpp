@@ -588,16 +588,16 @@ int dataOutput(McnpFillStruct mcnpgeo999, FILE* &editfile, char* filepath)
 			switch (j)
 			{
 			case 0:
-				datacardAP(mcnpgeo999, agename, j, dataoutputlocate);
+				datacardAP(mcnpgeo999, agename, i, dataoutputlocate);
 				break;	   
 			case 1:		   
-				datacardPA(mcnpgeo999, agename, j, dataoutputlocate);
+				datacardPA(mcnpgeo999, agename, i, dataoutputlocate);
 				break;	   
 			case 2:		   
-				datacardLLAT(mcnpgeo999, agename, j, dataoutputlocate);
+				datacardLLAT(mcnpgeo999, agename, i, dataoutputlocate);
 				break;	   
 			case 3:		   
-				datacardRLAT(mcnpgeo999, agename, j, dataoutputlocate);
+				datacardRLAT(mcnpgeo999, agename, i, dataoutputlocate);
 				break;
 			default:
 				break;
@@ -688,7 +688,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 		fprintf(dataoutputfile, "\n");
 	}
 
-	fprintf(dataoutputfile, "f14:p ( 14< 999 < 400)  $Humeri, upper half, spongiosa                        \n");
+	fprintf(dataoutputfile, "f14:p ( 14< 666 < 555)  $Humeri, upper half, spongiosa                        \n");
 	fprintf(dataoutputfile, "de14  0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -697,7 +697,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f24:p ( 25< 999 < 400)  $Clavicles, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f24:p ( 25< 666 < 555)  $Clavicles, spongiosa                                 \n");
 	fprintf(dataoutputfile, "c cora11  -30 99i 30                                                          \n");
 	fprintf(dataoutputfile, "de24 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
@@ -707,7 +707,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f34:p ( 27< 999 < 400)   $Cranium, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f34:p ( 27< 666 < 555)   $Cranium, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de34 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -716,7 +716,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00408 0.00282 0.00236 0.00215 &\n");
 	fprintf(dataoutputfile, "     0.00233 0.00277 0.00332 0.00384 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f44:p ( 29< 999 < 400)   $Femora, upper half, spongiosa                       \n");
+	fprintf(dataoutputfile, "f44:p ( 29< 666 < 555)   $Femora, upper half, spongiosa                       \n");
 	fprintf(dataoutputfile, "de44 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -725,7 +725,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00382 0.00244 0.00198 0.00184 &\n");
 	fprintf(dataoutputfile, "     0.00207 0.00255 0.00315 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f54:p ( 40< 999 < 400)   $Mandible, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f54:p ( 40< 666 < 555)   $Mandible, spongiosa                                 \n");
 	fprintf(dataoutputfile, "de54 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -734,7 +734,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f64:p ( 42< 999 < 400)    $Pelvis, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f64:p ( 42< 666 < 555)    $Pelvis, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de64 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -743,7 +743,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f74:p ( 44< 999 < 400)    $Ribs, spongiosa                                    \n");
+	fprintf(dataoutputfile, "f74:p ( 44< 666 < 555)    $Ribs, spongiosa                                    \n");
 	fprintf(dataoutputfile, "de74 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -752,7 +752,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00381 0.00241 0.00195 0.00183 &\n");
 	fprintf(dataoutputfile, "     0.00205 0.00254 0.00314 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f84:p ( 46< 999 < 400)     $Scapulae, spongiosa                               \n");
+	fprintf(dataoutputfile, "f84:p ( 46< 666 < 555)     $Scapulae, spongiosa                               \n");
 	fprintf(dataoutputfile, "de84 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -761,7 +761,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f94:p ( 48< 999 < 400)      $Cervical spine, spongiosa                        \n");
+	fprintf(dataoutputfile, "f94:p ( 48< 666 < 555)      $Cervical spine, spongiosa                        \n");
 	fprintf(dataoutputfile, "de94 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -770,7 +770,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f104:p ( 50< 999 < 400)     $ Thoracic spine, spongiosa                       \n");
+	fprintf(dataoutputfile, "f104:p ( 50< 666 < 555)     $ Thoracic spine, spongiosa                       \n");
 	fprintf(dataoutputfile, "de104 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -779,7 +779,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f114:p ( 52< 999 < 400)      $Lumbar spine, spongiosa                         \n");
+	fprintf(dataoutputfile, "f114:p ( 52< 666 < 555)      $Lumbar spine, spongiosa                         \n");
 	fprintf(dataoutputfile, "de114 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -788,7 +788,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00384 0.00247 0.00201 0.00187 &\n");
 	fprintf(dataoutputfile, "     0.00209 0.00257 0.00316 0.00377 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f124:p ( 54< 999 < 400)      $Sacrum, spongiosa                               \n");
+	fprintf(dataoutputfile, "f124:p ( 54< 666 < 555)      $Sacrum, spongiosa                               \n");
 	fprintf(dataoutputfile, "de124 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -797,7 +797,7 @@ int datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f134:p ( 56< 999 < 400)      $Sternum, spongiosa                              \n");
+	fprintf(dataoutputfile, "f134:p ( 56< 666 < 555)      $Sternum, spongiosa                              \n");
 	fprintf(dataoutputfile, "de134 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -881,7 +881,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 		fprintf(dataoutputfile, "\n");
 	}
 
-	fprintf(dataoutputfile, "f14:p ( 14< 999 < 400)  $Humeri, upper half, spongiosa                        \n");
+	fprintf(dataoutputfile, "f14:p ( 14< 666 < 555)  $Humeri, upper half, spongiosa                        \n");
 	fprintf(dataoutputfile, "de14  0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -890,7 +890,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f24:p ( 25< 999 < 400)  $Clavicles, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f24:p ( 25< 666 < 555)  $Clavicles, spongiosa                                 \n");
 	fprintf(dataoutputfile, "c cora11  -30 99i 30                                                          \n");
 	fprintf(dataoutputfile, "de24 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
@@ -900,7 +900,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f34:p ( 27< 999 < 400)   $Cranium, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f34:p ( 27< 666 < 555)   $Cranium, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de34 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -909,7 +909,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00408 0.00282 0.00236 0.00215 &\n");
 	fprintf(dataoutputfile, "     0.00233 0.00277 0.00332 0.00384 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f44:p ( 29< 999 < 400)   $Femora, upper half, spongiosa                       \n");
+	fprintf(dataoutputfile, "f44:p ( 29< 666 < 555)   $Femora, upper half, spongiosa                       \n");
 	fprintf(dataoutputfile, "de44 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -918,7 +918,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00382 0.00244 0.00198 0.00184 &\n");
 	fprintf(dataoutputfile, "     0.00207 0.00255 0.00315 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f54:p ( 40< 999 < 400)   $Mandible, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f54:p ( 40< 666 < 555)   $Mandible, spongiosa                                 \n");
 	fprintf(dataoutputfile, "de54 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -927,7 +927,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f64:p ( 42< 999 < 400)    $Pelvis, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f64:p ( 42< 666 < 555)    $Pelvis, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de64 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -936,7 +936,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f74:p ( 44< 999 < 400)    $Ribs, spongiosa                                    \n");
+	fprintf(dataoutputfile, "f74:p ( 44< 666 < 555)    $Ribs, spongiosa                                    \n");
 	fprintf(dataoutputfile, "de74 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -945,7 +945,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00381 0.00241 0.00195 0.00183 &\n");
 	fprintf(dataoutputfile, "     0.00205 0.00254 0.00314 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f84:p ( 46< 999 < 400)     $Scapulae, spongiosa                               \n");
+	fprintf(dataoutputfile, "f84:p ( 46< 666 < 555)     $Scapulae, spongiosa                               \n");
 	fprintf(dataoutputfile, "de84 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -954,7 +954,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f94:p ( 48< 999 < 400)      $Cervical spine, spongiosa                        \n");
+	fprintf(dataoutputfile, "f94:p ( 48< 666 < 555)      $Cervical spine, spongiosa                        \n");
 	fprintf(dataoutputfile, "de94 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -963,7 +963,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f104:p ( 50< 999 < 400)     $ Thoracic spine, spongiosa                       \n");
+	fprintf(dataoutputfile, "f104:p ( 50< 666 < 555)     $ Thoracic spine, spongiosa                       \n");
 	fprintf(dataoutputfile, "de104 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -972,7 +972,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f114:p ( 52< 999 < 400)      $Lumbar spine, spongiosa                         \n");
+	fprintf(dataoutputfile, "f114:p ( 52< 666 < 555)      $Lumbar spine, spongiosa                         \n");
 	fprintf(dataoutputfile, "de114 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -981,7 +981,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00384 0.00247 0.00201 0.00187 &\n");
 	fprintf(dataoutputfile, "     0.00209 0.00257 0.00316 0.00377 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f124:p ( 54< 999 < 400)      $Sacrum, spongiosa                               \n");
+	fprintf(dataoutputfile, "f124:p ( 54< 666 < 555)      $Sacrum, spongiosa                               \n");
 	fprintf(dataoutputfile, "de124 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -990,7 +990,7 @@ int datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dat
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f134:p ( 56< 999 < 400)      $Sternum, spongiosa                              \n");
+	fprintf(dataoutputfile, "f134:p ( 56< 666 < 555)      $Sternum, spongiosa                              \n");
 	fprintf(dataoutputfile, "de134 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1075,7 +1075,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 		fprintf(dataoutputfile, "\n");
 	}
 
-	fprintf(dataoutputfile, "f14:p ( 14< 999 < 400)  $Humeri, upper half, spongiosa                        \n");
+	fprintf(dataoutputfile, "f14:p ( 14< 666 < 555)  $Humeri, upper half, spongiosa                        \n");
 	fprintf(dataoutputfile, "de14  0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1084,7 +1084,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f24:p ( 25< 999 < 400)  $Clavicles, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f24:p ( 25< 666 < 555)  $Clavicles, spongiosa                                 \n");
 	fprintf(dataoutputfile, "c cora11  -30 99i 30                                                          \n");
 	fprintf(dataoutputfile, "de24 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
@@ -1094,7 +1094,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f34:p ( 27< 999 < 400)   $Cranium, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f34:p ( 27< 666 < 555)   $Cranium, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de34 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1103,7 +1103,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00408 0.00282 0.00236 0.00215 &\n");
 	fprintf(dataoutputfile, "     0.00233 0.00277 0.00332 0.00384 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f44:p ( 29< 999 < 400)   $Femora, upper half, spongiosa                       \n");
+	fprintf(dataoutputfile, "f44:p ( 29< 666 < 555)   $Femora, upper half, spongiosa                       \n");
 	fprintf(dataoutputfile, "de44 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1112,7 +1112,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00382 0.00244 0.00198 0.00184 &\n");
 	fprintf(dataoutputfile, "     0.00207 0.00255 0.00315 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f54:p ( 40< 999 < 400)   $Mandible, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f54:p ( 40< 666 < 555)   $Mandible, spongiosa                                 \n");
 	fprintf(dataoutputfile, "de54 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1121,7 +1121,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f64:p ( 42< 999 < 400)    $Pelvis, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f64:p ( 42< 666 < 555)    $Pelvis, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de64 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1130,7 +1130,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f74:p ( 44< 999 < 400)    $Ribs, spongiosa                                    \n");
+	fprintf(dataoutputfile, "f74:p ( 44< 666 < 555)    $Ribs, spongiosa                                    \n");
 	fprintf(dataoutputfile, "de74 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1139,7 +1139,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00381 0.00241 0.00195 0.00183 &\n");
 	fprintf(dataoutputfile, "     0.00205 0.00254 0.00314 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f84:p ( 46< 999 < 400)     $Scapulae, spongiosa                               \n");
+	fprintf(dataoutputfile, "f84:p ( 46< 666 < 555)     $Scapulae, spongiosa                               \n");
 	fprintf(dataoutputfile, "de84 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1148,7 +1148,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f94:p ( 48< 999 < 400)      $Cervical spine, spongiosa                        \n");
+	fprintf(dataoutputfile, "f94:p ( 48< 666 < 555)      $Cervical spine, spongiosa                        \n");
 	fprintf(dataoutputfile, "de94 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1157,7 +1157,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f104:p ( 50< 999 < 400)     $ Thoracic spine, spongiosa                       \n");
+	fprintf(dataoutputfile, "f104:p ( 50< 666 < 555)     $ Thoracic spine, spongiosa                       \n");
 	fprintf(dataoutputfile, "de104 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1166,7 +1166,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f114:p ( 52< 999 < 400)      $Lumbar spine, spongiosa                         \n");
+	fprintf(dataoutputfile, "f114:p ( 52< 666 < 555)      $Lumbar spine, spongiosa                         \n");
 	fprintf(dataoutputfile, "de114 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1175,7 +1175,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00384 0.00247 0.00201 0.00187 &\n");
 	fprintf(dataoutputfile, "     0.00209 0.00257 0.00316 0.00377 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f124:p ( 54< 999 < 400)      $Sacrum, spongiosa                               \n");
+	fprintf(dataoutputfile, "f124:p ( 54< 666 < 555)      $Sacrum, spongiosa                               \n");
 	fprintf(dataoutputfile, "de124 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1184,7 +1184,7 @@ int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f134:p ( 56< 999 < 400)      $Sternum, spongiosa                              \n");
+	fprintf(dataoutputfile, "f134:p ( 56< 666 < 555)      $Sternum, spongiosa                              \n");
 	fprintf(dataoutputfile, "de134 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1269,7 +1269,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 		fprintf(dataoutputfile, "\n");
 	}
 
-	fprintf(dataoutputfile, "f14:p ( 14< 999 < 400)  $Humeri, upper half, spongiosa                        \n");
+	fprintf(dataoutputfile, "f14:p ( 14< 666 < 555)  $Humeri, upper half, spongiosa                        \n");
 	fprintf(dataoutputfile, "de14  0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1278,7 +1278,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f24:p ( 25< 999 < 400)  $Clavicles, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f24:p ( 25< 666 < 555)  $Clavicles, spongiosa                                 \n");
 	fprintf(dataoutputfile, "c cora11  -30 99i 30                                                          \n");
 	fprintf(dataoutputfile, "de24 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
@@ -1288,7 +1288,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f34:p ( 27< 999 < 400)   $Cranium, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f34:p ( 27< 666 < 555)   $Cranium, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de34 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1297,7 +1297,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00408 0.00282 0.00236 0.00215 &\n");
 	fprintf(dataoutputfile, "     0.00233 0.00277 0.00332 0.00384 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f44:p ( 29< 999 < 400)   $Femora, upper half, spongiosa                       \n");
+	fprintf(dataoutputfile, "f44:p ( 29< 666 < 555)   $Femora, upper half, spongiosa                       \n");
 	fprintf(dataoutputfile, "de44 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1306,7 +1306,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00382 0.00244 0.00198 0.00184 &\n");
 	fprintf(dataoutputfile, "     0.00207 0.00255 0.00315 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f54:p ( 40< 999 < 400)   $Mandible, spongiosa                                 \n");
+	fprintf(dataoutputfile, "f54:p ( 40< 666 < 555)   $Mandible, spongiosa                                 \n");
 	fprintf(dataoutputfile, "de54 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1315,7 +1315,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f64:p ( 42< 999 < 400)    $Pelvis, spongiosa                                  \n");
+	fprintf(dataoutputfile, "f64:p ( 42< 666 < 555)    $Pelvis, spongiosa                                  \n");
 	fprintf(dataoutputfile, "de64 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1324,7 +1324,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f74:p ( 44< 999 < 400)    $Ribs, spongiosa                                    \n");
+	fprintf(dataoutputfile, "f74:p ( 44< 666 < 555)    $Ribs, spongiosa                                    \n");
 	fprintf(dataoutputfile, "de74 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1333,7 +1333,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00381 0.00241 0.00195 0.00183 &\n");
 	fprintf(dataoutputfile, "     0.00205 0.00254 0.00314 0.00376 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f84:p ( 46< 999 < 400)     $Scapulae, spongiosa                               \n");
+	fprintf(dataoutputfile, "f84:p ( 46< 666 < 555)     $Scapulae, spongiosa                               \n");
 	fprintf(dataoutputfile, "de84 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1342,7 +1342,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f94:p ( 48< 999 < 400)      $Cervical spine, spongiosa                        \n");
+	fprintf(dataoutputfile, "f94:p ( 48< 666 < 555)      $Cervical spine, spongiosa                        \n");
 	fprintf(dataoutputfile, "de94 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &     \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1351,7 +1351,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f104:p ( 50< 999 < 400)     $ Thoracic spine, spongiosa                       \n");
+	fprintf(dataoutputfile, "f104:p ( 50< 666 < 555)     $ Thoracic spine, spongiosa                       \n");
 	fprintf(dataoutputfile, "de104 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1360,7 +1360,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f114:p ( 52< 999 < 400)      $Lumbar spine, spongiosa                         \n");
+	fprintf(dataoutputfile, "f114:p ( 52< 666 < 555)      $Lumbar spine, spongiosa                         \n");
 	fprintf(dataoutputfile, "de114 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1369,7 +1369,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00384 0.00247 0.00201 0.00187 &\n");
 	fprintf(dataoutputfile, "     0.00209 0.00257 0.00316 0.00377 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f124:p ( 54< 999 < 400)      $Sacrum, spongiosa                               \n");
+	fprintf(dataoutputfile, "f124:p ( 54< 666 < 555)      $Sacrum, spongiosa                               \n");
 	fprintf(dataoutputfile, "de124 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
@@ -1378,7 +1378,7 @@ int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 	fprintf(dataoutputfile, "     0.75422 0.57505 0.58311 1.53283 0.90687 0.43144 0.24506 0.15636 &        \n");
 	fprintf(dataoutputfile, "     0.10760 0.06059 0.03793 0.01595 0.00860 0.00388 0.00252 0.00206 0.00191 &\n");
 	fprintf(dataoutputfile, "     0.00212 0.00260 0.00318 0.00378 0.00410 0.00588                          \n");
-	fprintf(dataoutputfile, "f134:p ( 56< 999 < 400)      $Sternum, spongiosa                              \n");
+	fprintf(dataoutputfile, "f134:p ( 56< 666 < 555)      $Sternum, spongiosa                              \n");
 	fprintf(dataoutputfile, "de134 0.0010 0.001072 0.0010721 0.001304 0.001305 0.0015 0.0020 0.002144 &    \n");
 	fprintf(dataoutputfile, "    0.002145 0.002471 0.002472 0.0030 0.0040 0.0050 0.0060 0.007111 &         \n");
 	fprintf(dataoutputfile, "    0.007112 0.0080 0.0100 0.0150 0.0200 0.0300 0.0400 0.0500 0.0600 &        \n");
