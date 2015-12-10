@@ -76,3 +76,5 @@ int   datacardAP(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* d
 int   datacardPA(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
 int datacardLLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
 int datacardRLAT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
+int datacardROT(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);
+int datacardISO(McnpFillStruct mcnpgeo999, char* agename, int ergindex, char* dataoutputlocate);

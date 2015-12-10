@@ -142,8 +142,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dataoutputfunction.cpp" />
     <ClCompile Include="function.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="objdata.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="datastructure.h" />
